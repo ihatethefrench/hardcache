@@ -542,7 +542,7 @@ fn parse_line(line: String) -> Result(#(String, String), Nil) {
       case string.first(key) {
         Ok("!") ->
           Ok(#(
-            string.drop_left(key, 1),
+            string.drop_start(key, 1),
             string.join(value, "="),
             // Restore the equal signs
           ))
